@@ -30,4 +30,5 @@ while game_is_on:
     #Detect successful crossing
     if player.isAtFinishLine():
         player.gotoStart()
+        car_manager.level_up()
 screen.exitonclick()
