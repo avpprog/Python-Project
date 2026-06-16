@@ -6,18 +6,19 @@ FINISH_LINE_Y = 280
 
 from turtle import Turtle
 
-class Player:
+class Player(Turtle):
     def __init__(self):
-        self.turtle = Turtle("turtle")
-        self.turtle.penup()
-        self.turtle.goto(STARTING_POSITION)
-        self.turtle.setheading(90)
+        super().__init__()
+        self.shape("turtle")
+        self.penup()
+        self.goto(STARTING_POSITION)
+        self.setheading(90)
 
     def up(self):
-        self.turtle.fd(MOVE_DISTANCE)
+        self.fd(MOVE_DISTANCE)
 
     def down(self):
-        self.turtle.bk(MOVE_DISTANCE)
+        self.bk(MOVE_DISTANCE)
 
 
 
